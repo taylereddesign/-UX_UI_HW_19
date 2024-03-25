@@ -1,0 +1,272 @@
+ /*
+ :before,
+ :after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+   
+   font-weight: 500;
+ }
+
+p{
+  color: #F6F7F7;
+}
+
+body{
+  background-color: #F6F7F7;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-family: inter;
+  font-weight: 500;
+}
+
+/*
+.icon{
+  width: 24px;
+}
+*/
+/*
+.wrapper{
+  box-sizing: content-box;
+  background-color: #272C2C;
+  height: 70px;
+  padding: 250px 500px;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+  
+}
+
+.words{
+  overflow: hidden;
+  font-size: 64px;
+  font-family: Marcellus cs;
+ 
+  
+}
+
+li{
+  list-style: none;
+  font-weight: 950;
+  font-size: 48px;
+   color: #F6F7F7;
+
+ }
+
+
+
+span{
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  color: #F4786C;
+  animation: spin_words 7s infinite;
+  
+}
+
+@keyframes spin_words{
+  10%{
+    transform: translateY(-112%);
+  }
+  25%{
+   transform: translateY(-100%);
+  }
+  35%{
+     transform: translateY(-212%);
+  }
+  50%{
+     transform: translateY(-200%);
+  }
+  60%{
+     transform: translateY(-312%);
+  }
+  75%{
+     transform: translateY(-300%); 
+  }
+  85%{
+     transform: translateY(-412%);
+  }
+  100%{
+     transform: translateY(-400%);
+  }
+  
+} 
+ 
+ */
+ 
+ 
+ .document {
+
+    Border:none; 
+    width: 600px; 
+    height: 800px; 
+    overflow:scroll;
+    font-size: 36px;
+    text-align: left;
+    background-color:#2E2D2D;;
+    color:azure;
+  
+
+ }
+
+section{
+    display: inline-flex;
+    
+    
+    align-items: center;
+
+}
+
+.profpic{
+    display: inline-flex;
+    justify-content: left;
+    
+    align-items: center;
+}
+
+
+
+.container{
+  display:flex;
+  align-items: center;
+}
+
+ img{
+
+    width: 600px;
+    height: 800px;
+
+ }
+
+ li{
+   list-style-type: none;
+  
+ }
+
+body{
+  background-color: #2E2D2D;
+  color: #F6F7F7;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+ }
+/* Ive been playing around trying different forms of slide in but havent gotten it yet.
+  I want each line to slide in on scroll.
+ 
+ I dont know if it should really be in the scrolling container but 
+ I want the image to be sticky until a certain point (reaches a particular line of text) 
+ and then the whole page scrolls. 
+ 
+ most recently I feel that instead or ontop of the slide in it should use fade-out animation
+so it comes in and out of view smoothly as the user scrolls. Im not sure exactly how to get this to work yet...
+Should I be apply it to the container? the li? each line individually? both?
+Can I have them slide in and fade out? Do you think one works better for the purpose of my design? */
+/*
+
+li{
+animation: Slide_Up 1.4s ease;
+
+}
+*/
+
+.P1{
+  animation: Slide_Up 1.4s ease;
+
+}
+
+.P2{
+  animation: Slide_Up 2.1s ease;
+ 
+}
+
+.P3{
+  animation: Slide_Up 3.4s ease;
+}
+
+.P4{
+  animation: Slide_Up 4.1s ease;
+}
+
+.P5{
+  font-style: italic;
+  animation: Slide_Up 5.4s ease;
+}
+
+.P6{
+  font-style: italic;
+  animation: Slide_Up 6.1s ease;
+}
+
+.P7{
+  font-style: italic;
+  animation: Slide_Up 7.4s ease;
+}
+.P8{
+  font-style: italic;
+  animation: Slide_Up 8.1s ease;
+}
+
+.P9{
+  font-style: italic;
+  animation: Slide_Up 9.4s ease;
+}
+
+/*
+.l1{
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -100px;
+  
+}
+
+@keyframes fade-out{
+  opacity: 0;
+}
+*/
+
+@keyframes Slide_Up{
+  0%{
+    transform: translateY(250px);
+  }
+  100%{
+    transform: translateY(0)
+  }
+}
+
+/*
+.document{
+animation: fade-out linear forwards;
+animation-timeline: view();
+animation-range: exit -200px;
+}
+
+@keyframes fade-out{
+  to {opacity: 0;}
+}
+@keyframes document-animation{
+  25% {opacity:1;}
+  85%, 100% {opacity: 0;}
+}
+*/
+
+
+
+@media(prefers-reduced-motion: no-preference)
+
+.profpic{
+  animation: fade-in linear forwards;
+animation-timeline: view();
+/*
+animation-range-start:contain;
+animation-range-end: contain; 
+*/
+animation-range: entry 100px;
+scale: .8; opacity: 0;
+
+}
+
+@keyframes fade-in{
+  
+  to { scale: 1; opacity: 1;}
+}
